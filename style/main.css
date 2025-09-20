@@ -1,0 +1,196 @@
+/*variables*/
+/*global things*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Nunito";
+  overflow-x: hidden;
+  color: rgb(42, 61, 69);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito";
+}
+
+.guiding-q {
+  z-index: 100;
+  font-size: 1.8vw;
+}
+
+.q-top {
+  text-align: left;
+  position: absolute;
+  top: 2vh;
+  left: 10vw;
+}
+
+.q-bottom {
+  text-align: right;
+  position: absolute;
+  bottom: 2vh;
+  right: 4vw;
+}
+
+#diagram {
+  height: 98vh;
+  width: 90vw;
+  margin-left: 5vw;
+  margin-top: 1vh;
+}
+
+.q-list {
+  position: absolute;
+  font-size: 0.9vw;
+}
+
+.f-q {
+  margin-top: 2.5vh;
+  font-weight: 500;
+}
+
+.info-icon {
+  font-size: 115%;
+}
+.info-icon .fa-info-circle :hover {
+  color: rgb(40, 150, 90);
+  cursor: pointer;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.facet-label {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.panel-closed {
+  width: 0px !important;
+}
+
+.panel-open {
+  width: 40%;
+}
+
+.close-button {
+  font-size: 25px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: 99;
+  cursor: pointer !important;
+}
+.close-button :hover {
+  color: red;
+}
+
+#question-panel {
+  z-index: 9999;
+  height: 100% !important;
+  border: 1px solid rgb(180, 180, 180);
+  background-color: rgb(246, 246, 246);
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  overflow-y: scroll;
+  transition: width 0.5s;
+  -webkit-transition: width 0.5s;
+  -moz-transition: width 0.5s;
+  -o-transition: width 0.5s;
+}
+
+.action-icons {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  z-index: 999;
+  font-size: 150%;
+  color: rgb(42, 61, 69);
+}
+.action-icons :hover {
+  color: rgb(40, 150, 90);
+}
+
+.action {
+  padding-bottom: 1vh;
+  color: rgb(42, 61, 69) !important;
+}
+.action a {
+  color: rgb(42, 61, 69) !important;
+}
+
+#panel-content {
+  padding: 4%;
+}
+
+#f-buttons {
+  display: inline;
+  width: 60%;
+  margin-left: 33%;
+}
+#f-buttons .facet-select {
+  width: 1.8vw;
+  height: 1.8vw;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5%;
+  vertical-align: middle;
+}
+#f-buttons .active-facet {
+  border: 3px solid rgb(40, 150, 90);
+}
+#f-buttons .non-active:hover {
+  width: 2.3vw;
+  height: 2.3vw;
+  cursor: pointer;
+}
+
+#form-content {
+  padding: 2%;
+  margin-top: 2vh;
+}
+#form-content .form-title {
+  font-size: 130%;
+  text-align: center;
+  margin-bottom: 3vh;
+}
+#form-content .form-field {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+#form-content .form-question {
+  margin-bottom: 0.25vh;
+}
+#form-content textarea {
+  width: 100%;
+  height: 20vh;
+  overflow-y: scroll;
+}
+
+#download-button {
+  margin-top: 2vh;
+  text-align: center;
+  width: 48%;
+  margin-left: 26%;
+  padding: 3%;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(42, 61, 69);
+  font-size: 1.5vw;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#download-button:hover {
+  background-color: rgb(40, 150, 90);
+  cursor: pointer;
+}
+
+/*media queries*/
+/* Extra small devices (phones, 600px and down) */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+/*# sourceMappingURL=main.css.map */
