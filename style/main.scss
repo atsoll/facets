@@ -58,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .info-icon {
+  display: inline;
   font-size: 115%;
   .fa-info-circle{
     :hover {
@@ -215,6 +216,63 @@ h1, h2, h3, h4, h5, h6 {
    background-color: $action-green;
    cursor:pointer;
  }
+
+ .modal-exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 25px;
+
+  :hover {
+    color: red;
+    cursor: pointer;
+  }
+}
+
+.modal-content {
+  height: 90vh;
+  overflow-y: scroll;
+  padding: 5vh 15px 5vh 15px;
+}
+
+.more-link {
+  a {
+    color: $font-colour !important;
+
+
+  }
+  :hover {
+    color: $action-green !important;
+  }
+  font-weight: bold;
+  font-size: 115%;
+  text-align: right;
+
+
+}
+
+.modal-main {
+  padding: 5%;
+
+  .modal-title {
+    font-size: 125%;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 1vh
+  }
+
+  .img-container {
+    img {
+      max-height: 40vh;
+      width: auto;
+    }
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+}
 
 
 

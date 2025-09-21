@@ -44,11 +44,11 @@
         <div class="facet-title"></div>
         <div class="q-list" style="top:{{f.top}}; left:{{f.left}}"  > <!--I wish I could be more clever about this-->
             <!--could put these as an unordered list, but I think that might hurt styling more than it helps-->
-            <div class="f-q" ng-repeat="q in f.questions" style="max-width:{{q.w}}vw"  ng-style="{'margin-left': f.index>1? getOffset(q.w) :'0'}" ng-class="f.index > 1? 'right-align':''">
-              <span class="info-icon" ng-click="" ng-if="f.index>1"><i class="fas fa-info-circle"></i></span>
+            <div class="f-q" ng-repeat="q in f.questions" style="max-width:{{q.w}}vw"  ng-style="{'margin-left': f.index>1? getOffset(q.w) :'0'}" ng-class="f.index > 1? 'right-align':''" ng-click="openModal(q)">
+              <div class="info-icon" ng-click="openModal(q)" ng-if="f.index>1"><i class="fas fa-info-circle"></i></div>
               <span>{{q.text}}</span>
               <!--need to figure out what is needed for click-->
-              <span class="info-icon" ng-click="" ng-if="f.index<2"><i class="fas fa-info-circle"></i></span>
+              <div class="info-icon" ng-click="" ng-if="f.index<2"><i class="fas fa-info-circle"></i></div>
             </div>
         </div>
       </div>

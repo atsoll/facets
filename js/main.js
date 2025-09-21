@@ -10,6 +10,7 @@ var w = window.innerWidth*0.9
 var h = window.innerHeight*0.98
 let val = ((h/2)-5)/(w/2)
 var ang= (Math.atan(val) * 180) / Math.PI;
+let prefix=""
 
 
 
@@ -78,9 +79,9 @@ app.controller('ctrl', function($scope, apiService, $window, $document, $uibModa
         //colour:"#FFBF00",
         fill_colour: "#33EEFF",//"#FFD147",
         rgb:[],
-        questions:[{"text":"What problem or question dimensions are not represented or could not be captured? Why?", modal:"", w:20, "answer":""},
-        {"text":"What information or outlooks were made invisible? How and why?", modal:"", w:30, "answer":""},
-        {"text":"What dimensions could be revived or revealed by digital intervention? How?", modal:"", w:36, "answer":""}],
+        questions:[{"text":"What problem or question dimensions are not represented or could not be captured? Why?", modal:"examples/nn1.html", w:20, "answer":""},
+        {"text":"What information or outlooks were made invisible? How and why?", modal:"examples/nn2.html", w:30, "answer":""},
+        {"text":"What dimensions could be revived or revealed by digital intervention? How?", modal:"examples/nn3.html", w:36, "answer":""}],
         index:0,
         top: '25vh',
         left: '52vw'
@@ -88,9 +89,9 @@ app.controller('ctrl', function($scope, apiService, $window, $document, $uibModa
       { name:"Positionality and Context",
         //colour:"#E83F6F",
         fill_colour:"#FA8261",//"#349AD5" ,
-        questions:[{"text":"What is the context of the work? How is that context represented or occluded?", modal:"", w:36, "answer":""},
-        {"text":"What perspectives and corresponding values and beliefs are represented? How?", modal:"", w:30, "answer":""},
-        {"text":"To what extent is positionality highlighted or hidden?", modal:"", w:20, "answer":""}],
+        questions:[{"text":"What is the context of the work? How is that context represented or occluded?", modal:"examples/pc1.html", w:36, "answer":""},
+        {"text":"What perspectives and corresponding values and beliefs are represented? How?", modal:"examples/pc2.html", w:30, "answer":""},
+        {"text":"To what extent is positionality highlighted or hidden?", modal:"examples/pc3.html", w:20, "answer":""}],
         index:1,
         top:'52vh',
         left:'52vw'
@@ -98,9 +99,9 @@ app.controller('ctrl', function($scope, apiService, $window, $document, $uibModa
       { name:"Relationship to Tools",
         //colour:"#2274A5",
         fill_colour:"#FBD774",//"#F07F9F",
-        questions:[{"text":"In what way has the intervention of the digital impacted/altered research questions?", modal:"", w:36, "answer":""},
-        {"text":"What parts of the work are being done by machines? What is the impact of this?", modal:"", w:30, "answer":""},
-        {"text":"What assumptions are being made about the data or tools in the context of their use? ", modal:"", w:20, "answer":""}],//I think I need to rethink this question
+        questions:[{"text":"In what way has the intervention of the digital impacted/altered research questions?", modal:"examples/rt1.html", w:36, "answer":""},
+        {"text":"What parts of the work are being done by machines? What is the impact of this?", modal:"examples/rt2.html", w:30, "answer":""},
+        {"text":"What assumptions are being made about the data or tools in the context of their use? ", modal:"examples/rt3.html", w:20, "answer":""}],//I think I need to rethink this question
         index:2,
         top:'52vh',
         left:'17vw'
@@ -108,9 +109,9 @@ app.controller('ctrl', function($scope, apiService, $window, $document, $uibModa
       { name:"Hermeneutic Attention",
         //color:"#32936F",
         fill_colour:"#D6C5FC",//"#49C195",
-        questions:[{"text":"At what points is interpretation happening?", modal:"", w:20, "answer":""},
-        {"text":"In what ways are computers ‘participating’ in the interpretation process?", modal:"", w:30, "answer":""},
-        {"text":"How is interpretation (human or machine) made visible or invisible?", modal:"", w:36, "answer":""}],
+        questions:[{"text":"At what points is interpretation happening?", modal:"examples/ha1.html", w:20, "answer":""},
+        {"text":"In what ways are computers ‘participating’ in the interpretation process?", modal:"examples/ha2.html", w:30, "answer":""},
+        {"text":"How is interpretation (human or machine) made visible or invisible?", modal:"examples/ha2.html", w:36, "answer":""}],
         index:3,
         top:'25vh',
         left:'17vw'
@@ -128,9 +129,10 @@ app.controller('ctrl', function($scope, apiService, $window, $document, $uibModa
     return x.toString() + 'vw'
   }
 
-  $scope.openModal = function(url) {
+  $scope.openModal = function(q) {
+    $scope.model.active_q = q
     $scope.model.modalInstance = $uibModal.open({
-       templateUrl: prefix + url,
+       templateUrl: prefix + q.modal,
        scope: $scope,
        size: 'lg'
      });
