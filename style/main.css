@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   color: white;
   background-color: rgb(42, 61, 69);
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -202,18 +202,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 90vh;
   overflow-y: scroll;
   padding: 5vh 15px 5vh 15px;
-}
-
-.more-link a {
-  color: rgb(42, 61, 69) !important;
-}
-.more-link :hover {
-  color: rgb(40, 150, 90) !important;
-}
-.more-link {
-  font-weight: bold;
-  font-size: 115%;
-  text-align: right;
 }
 
 .modal-main {
