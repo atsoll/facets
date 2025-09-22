@@ -111,7 +111,7 @@ app.controller('ctrl', function($scope, apiService, $window, $document, $uibModa
         fill_colour:"#D6C5FC",//"#49C195",
         questions:[{"text":"At what points is interpretation happening?", modal:"examples/ha1.html", w:20, "answer":""},
         {"text":"In what ways are computers ‘participating’ in the interpretation process?", modal:"examples/ha2.html", w:30, "answer":""},
-        {"text":"How is interpretation (human or machine) made visible or invisible?", modal:"examples/ha2.html", w:36, "answer":""}],
+        {"text":"How is interpretation (human or machine) made visible or invisible?", modal:"examples/ha3.html", w:36, "answer":""}],
         index:3,
         top:'25vh',
         left:'17vw'
