@@ -2,7 +2,7 @@
 $body-font: 'Nunito';
 $heading-font: 'Nunito';
 $font-colour: rgb(42, 61, 69);
-$action-green: rgb(40 150 90);
+$action-green: rgb(40, 150, 90);
 
 
 
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .q-list {
   position: absolute;
-  font-size: 0.9vw;
+  font-size: 1.5vh;
 }
 
 .f-q {
@@ -119,10 +119,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .action-icons {
   position: fixed;
-  top: 5px;
-  right: 5px;
+  top: 2vh;
+  right: 3vh;
   z-index: 999;
-  font-size: 150%;
+  font-size: 170%;
   color: $font-colour;
 
   :hover {
@@ -246,6 +246,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px;
     border-radius: 6px;
     margin-bottom: 1vh
+  }
+
+  .modal-subtitle {
+    font-size: 110%;
+    margin-bottom: 3vh;
+    font-style: italic;
   }
 
   .img-container {
